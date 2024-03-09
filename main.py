@@ -42,7 +42,7 @@ def benchmark():
     tradOutput = {'unsorted': [], 'mostlySorted': []}
     modOutput = {'unsorted': [], 'mostlySorted': []}
 
-    for i in range(10):
+    for i in range(1, 11):
         unsortedList1 = []
         unsortedList2 = []
 
@@ -83,7 +83,6 @@ def benchmark():
 def showGraph(tradArray, modArray):
     plt.plot(range(1, 11), tradArray['unsorted'], label='Traditional BubbleSorting Unsorted')
     plt.plot(range(1, 11), tradArray['mostlySorted'], label='Traditional BubbleSorting Mostly Sorted')
-    # Add search
     plt.plot(range(1, 11), modArray['unsorted'], label='Modified BubbleSorting Unsorted')
     plt.plot(range(1, 11), modArray['mostlySorted'], label='Modified BubbleSorting Mostly Sorted')
     plt.xlabel('Number of Samples (x100)')
